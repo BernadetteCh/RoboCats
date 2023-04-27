@@ -22,9 +22,9 @@ public class CatCreator {
         return catNames[randomIndex];
     }
 
-    private BreedType generateRandomBreed() {
+    private String generateRandomBreed() {
         BreedType breedTypeEnum[] = BreedType.values();
         int randomIndex = randomProvider.createRandomIndex(breedTypeEnum.length);
-        return breedTypeEnum[randomIndex];
+        return breedTypeEnum[randomIndex].toString();
     }
 }
