@@ -3,7 +3,8 @@ package com.robocat.roboCat.service;
 import com.robocat.roboCat.model.BreedType;
 import com.robocat.roboCat.model.Cat;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CatCreator {
     private final RandomProvider randomProvider;
@@ -12,7 +13,7 @@ public class CatCreator {
         this.randomProvider = randomProvider;
     }
 
-    public Cat createRandomCat() {
+    public Cat createRandomCats() {
         return new Cat(randomProvider.createRandomIndex(20), generateRandomName(), generateRandomBreed());
     }
 
