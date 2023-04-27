@@ -32,7 +32,7 @@ public class CatStorage {
         return cat;
     }
 
-    private void delete(String name) {
+    public void delete(String name) {
         cats.removeIf(existing->existing.name().equals(name));
     }
 }
