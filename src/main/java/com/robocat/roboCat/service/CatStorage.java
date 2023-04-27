@@ -19,8 +19,8 @@ public class CatStorage {
         return cats;
     }
     public void addRandomlyCreatedCatToList(CatCreator catCreator) {
-        cats.add(catCreator.createRandomCat());
-        randomGeneratedCats.add(catCreator.createRandomCat());
+        cats.add(catCreator.createRandomCats());
+        randomGeneratedCats.add(catCreator.createRandomCats());
     }
     public List<Cat> readAllRandomGeneratedCats() {
         return randomGeneratedCats;
