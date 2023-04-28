@@ -7,7 +7,6 @@ import com.robocat.roboCat.service.RandomProvider;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Random;
 
 @RestController
 @RequestMapping("cats")
@@ -26,7 +25,7 @@ public class CatEndpoint {
 
     @GetMapping("{name}")
         public Cat getCatByName(@PathVariable String name) throws CatNotFoundException{
-            return catStorage.readFirstByName(name)
+            return catStorage.readOneByName(name)
                     .orElseThrow(CatNotFoundException::new);
         }
 

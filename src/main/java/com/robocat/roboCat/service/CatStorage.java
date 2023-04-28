@@ -5,7 +5,6 @@ import com.robocat.roboCat.model.Cat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class CatStorage {
     private final List<Cat> cats;
@@ -34,7 +33,7 @@ public class CatStorage {
         return cat;
     }
 
-    public Optional<Cat> readFirstByName(String name) {
+    public Optional<Cat> readOneByName(String name) {
        return cats.stream()
                 .filter(cat -> cat.name().equals(name)).findFirst();
     }
