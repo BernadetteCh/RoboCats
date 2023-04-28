@@ -24,6 +24,13 @@ public class CatEndpoint {
         return cat;
     }
 
+    @GetMapping("{name}")
+        public Cat getCatByName(@PathVariable String name) throws CatNotFoundException{
+            return catStorage.readFirstByName(name)
+                    .orElseThrow(CatNotFoundException::new);
+        }
+
+
     @GetMapping
     public List<Cat> readAll() {
         return catStorage.readAll();
