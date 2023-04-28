@@ -29,7 +29,6 @@ public class CatEndpoint {
                     .orElseThrow(CatNotFoundException::new);
         }
 
-
     @GetMapping
     public List<Cat> readAll() {
         return catStorage.readAll();
